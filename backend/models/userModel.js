@@ -10,7 +10,7 @@ updated_at
 */
 
 const {DataTypes} = require('sequelize');
-const {connectToDb} = require('./conn');
+const {connectToDb} = require('../config/conn');
 //const Zombie = require('./userModel')
 
 const User = connectToDb.define('user', {

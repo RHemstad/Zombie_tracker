@@ -4,7 +4,7 @@ const Users = require('../models/userModel');
 /* *************************** */
 /* *** GET ALL REGISTERED USERS ********* */
 
-//http://localhost:3000/users/
+//http://localhost:3500/users/
 async function getAllRegisteredUsers(req, res) {
     try {
         const results = await Users.findAll()

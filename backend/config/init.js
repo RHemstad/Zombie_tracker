@@ -1,4 +1,4 @@
-const {connectToDB} = require("../models/conn");
+const {connectToDB} = require("./conn");
 const User = require("../models/userModel");
 const Zombie = require("../models/zombieModel");
 

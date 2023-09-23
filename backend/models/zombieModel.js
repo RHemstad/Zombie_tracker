@@ -12,7 +12,7 @@ image_url (or a reference to the image location)?
 */
 
 const {DataTypes} = require('sequelize');
-const {connectToDb} = require('./conn');
+const {connectToDb} = require('../config/conn');
 //const User = require('./userModel')
 
 const Zombie = connectToDb.define('zombie', {

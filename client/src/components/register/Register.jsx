@@ -8,10 +8,7 @@ import axios from '../../api/axios';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-
-//endpoint for registration in backend
-//todo: fix this
-const REGISTER_URL = '/register';
+const REGISTER_URL = 'http://localhost:3500/register'; //endpoint for registration in backend
 
 const Register = () => {
     const userRef = useRef();
@@ -32,35 +29,43 @@ const Register = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
+
+    /* **************************** */
+    /* **** USE EFFECT ************ */
+    /* **************************** */
+
     useEffect(() => {
         userRef.current.focus();
     }, [])
 
     useEffect(() => {
-        //setValidName(USER_REGEX.test(username));
+        setValidName(USER_REGEX.test(username));
         /* following is just for testing */
-        const result = USER_REGEX.test(username);
-        console.log(result);
-        console.log(username);
-        setValidName(result);
+        //const result = USER_REGEX.test(username);
+        //console.log(result);
+        //console.log(username);
+        //setValidName(result);
 
     }, [username])
 
     useEffect(() => {
-        //setValidPwd(PWD_REGEX.test(pwd));
-        //setValidMatch(pwd === matchPwd);
+        setValidPwd(PWD_REGEX.test(password));
+        setValidMatch(password === matchPwd);
         /* following is just for testing */
-        const result = PWD_REGEX.test(password);
-        console.log(result);
-        console.log(password);
-        const match = password === matchPwd;
-        setValidMatch(match);
+        //const result = PWD_REGEX.test(password);
+        //console.log(result);
+        //console.log(password);
+        //const match = password === matchPwd;
+        //setValidMatch(match);
     }, [password, matchPwd])
-
 
     useEffect(() => {
         setErrMsg('');
     }, [username, password, matchPwd])
+
+    /* **************************** */
+    /* **** HANDLE SUBMIT ******* */
+    /* **************************** */
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -73,20 +78,16 @@ const Register = () => {
         }
         try {
             const response = await axios.post(REGISTER_URL,
-                //you may need to change this to match your backend
-                //ie: {user: username, pwd: password}
                 JSON.stringify({ username, password }),
                 {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true
                 }
             );
-            console.log(response?.data);
-            console.log(response?.accessToken);
+            console.log(response.data);
+            //console.log(response.accessToken);
             console.log(JSON.stringify(response))
             setSuccess(true);
-            //clear state and controlled inputs
-            //need value attrib on inputs for this
             setUser('');
             setPwd('');
             setMatchPwd('');
