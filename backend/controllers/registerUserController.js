@@ -1,14 +1,13 @@
 //Get the data from the database
-const Zombies = require('../models/zombieModel');
-
+const Users = require('../models/userModel');
 
 /* *************************** */
-/**** GET ALL USERS ********* */
+/* *** GET ALL REGISTERED USERS ********* */
 
 //http://localhost:3000/users/
-async function getAllZombies(req, res) {
+async function getAllRegisteredUsers(req, res) {
     try {
-        const results = await Zombies.findAll()
+        const results = await Users.findAll()
         //res.status(200).json("this is our home route")
         res.status(200).json(results)
     } catch (error) {
@@ -17,4 +16,4 @@ async function getAllZombies(req, res) {
     }
 };
 
-module.exports = {getAllZombies}
+module.exports = {getAllRegisteredUsers}

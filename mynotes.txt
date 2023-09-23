@@ -5,6 +5,15 @@ Frontend
 `npm install @amcharts/amcharts5`
 `npm install @amcharts/amcharts5-geodata`
 `npm install @amcharts/amcharts5-fonts` --haven't installed not sure I need it
+`npm i --save @fortawesome/fontawesome-svg-core`
+# Free icons styles
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+
+npm i axios
+
+
 
 
 Backend
@@ -14,6 +23,10 @@ Backend
 //npm i sequelize pg pg-hstore
 //npm i cors
 
+
+
+
+npm run init (makes the connection/creates the tables)
 
 
 

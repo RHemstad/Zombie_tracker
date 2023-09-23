@@ -1,6 +1,5 @@
 //Get the data from the database
-const Users = require('../models/userModel')
-
+const Users = require('../models/userModel');
 
 /* *************************** */
 /* *** GET ALL USERS ********* */
@@ -15,6 +14,6 @@ async function getAllUsers(req, res) {
         //console.log(error)
         res.status(500).json({message: error})
     }
-}
+};
 
 module.exports = {getAllUsers}
