@@ -1,0 +1,27 @@
+Frontend
+
+`npx create-react-app zombie_tracker`
+`npm i react-router-dom`
+`npm install @amcharts/amcharts5`
+`npm install @amcharts/amcharts5-geodata`
+`npm install @amcharts/amcharts5-fonts` --haven't installed not sure I need it
+
+
+Backend
+
+//npm init -y
+//npm i express nodemon
+//npm i sequelize pg pg-hstore
+//npm i cors
+
+
+
+
+
+
+
+Miscellaneous
+
+Basic Routing refresher
+https://www.knowledgehut.com/blog/web-development/routing-in-reactjs#basic-routing%C2%A0
+

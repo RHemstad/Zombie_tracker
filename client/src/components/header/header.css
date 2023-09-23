@@ -1,0 +1,50 @@
+/* ****************************** */
+/* ********** HEADER ************ */
+/* ****************************** */
+
+header {
+    background-color: pink;
+    width: inherit;
+    padding-inline: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    min-height: 65px;
+    max-height: 65px;
+    height: 65px;
+  }
+  
+  /* **** Logo ***** 
+  header .logo {
+    display: block;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 100px;
+  }
+  */
+  
+
+  header h1 a {
+    color: var(--color-neutral);
+    text-decoration: none;
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+  }
+
+  header h1 a:visited {
+    color: var(--color-neutral);
+    text-decoration: none;
+  }
+  
+  header h1 a:hover {
+    text-decoration: underline;
+  }
+
+  header h1 a:active {
+    text-decoration: underline;
+  }
+
+
+

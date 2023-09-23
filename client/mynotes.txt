@@ -1,0 +1,24 @@
+Frontend
+
+`npx create-react-app zombie_tracker`
+`npm i react-router-dom`
+
+
+Backend
+
+//npm init -y
+//npm i express nodemon
+//npm i sequelize pg pg-hstore
+//npm i cors
+
+
+
+
+
+
+
+Miscellaneous
+
+Basic Routing refresher
+https://www.knowledgehut.com/blog/web-development/routing-in-reactjs#basic-routing%C2%A0
+

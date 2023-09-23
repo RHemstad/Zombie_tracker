@@ -1,0 +1,24 @@
+/* ************************ */
+/* ******* FOOTER ********* */
+
+footer {
+    padding-inline: var(--spacing-md);
+    padding-block: var(--spacing-md);
+    font-size: var(--font-size-small);
+    color: var(--color-neutral);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    color: black;
+}
+
+footer div:first-child {
+    justify-self: center;
+    align-self: center;
+    flex-grow: 2;
+}
+
+footer div:nth-child(2) {
+    text-align: right;
+}

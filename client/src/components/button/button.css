@@ -1,0 +1,93 @@
+
+
+
+/* ************************************************************ */
+/* PRIMARY BUTTON */
+/* ************************************************************ */        
+
+.primary-button {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: var(--color-button-background-primary-normal);
+    border-radius: var(--size-border-radius-medium);
+    color: var(--color-button-text-primary-normal);
+    /*box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;*/
+    cursor: pointer;
+    font-family: var(--font-family-body);
+    overflow: hidden;
+    padding: var(--spacing-x-sm) var(--spacing-x-sm);
+    text-align: center;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    border: 1px solid var(--color-button-background-primary-normal);
+    font-size: var(--font-size-body);
+  }
+  
+  .primary-button:disabled {
+    cursor: default;
+  }
+  
+  .primary-button:focus {
+   /* box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;*/
+  }
+  
+  .primary-button:hover {
+      background-color: var(--color-button-background-primary-hover);
+      color: var(--color-button-text-primary-hover);
+  }
+  
+  .primary-button:active {
+      background-color: var(--color-button-background-primary-active);
+      color: var(--color-button-text-primary-active);
+  }
+  
+  /* ************************************************************ */
+  /* PRIMARY BUTTON */
+  /* ************************************************************ */        
+  
+  .footer-button {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: var(--color-button-background-primary-normal);
+    border-radius: var(--size-border-radius-medium);
+    color: var(--color-button-text-primary-normal);
+    cursor: pointer;
+    font-family: var(--font-family-body);
+    overflow: hidden;
+    padding: var(--spacing-xx-sm) var(--spacing-xx-sm);
+    text-align: center;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    width: fit-content;
+    border: 1px solid var(--color-button-background-primary-normal);
+    font-size: var(--font-size-body);
+    text-decoration: underline;
+  }
+  
+  .footer-button:disabled {
+    cursor: default;
+  }
+  
+  .footer-button:focus {
+   /* box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;*/
+  }
+  
+  .footer-button:hover {
+      background-color: var(--color-button-background-primary-hover);
+      color: var(--color-button-text-primary-hover);
+  }
+  
+  .footer-button:active {
+      background-color: var(--color-button-background-primary-active);
+      color: var(--color-button-text-primary-active);
+  }
+  
+  
