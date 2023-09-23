@@ -1,0 +1,16 @@
+
+/* ******************************************************************* */
+/* *********************** main ***************************** */
+/* ******************************************************************* */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   /* background: var(--color-neutral);*/
+    color: var(--color-text);
+    /*background-image: url("../../assets/images/background.svg");*/
+    background-repeat: repeat;
+    background-size: 30%;
+    border: 1px solid green;
+  }

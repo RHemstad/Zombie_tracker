@@ -1,11 +1,14 @@
-const zombiesList = require('./seedZombie')
-const usersList = require('./seedUsers')
-const Zombie = require('../models/zombieModel')
-const User = require('../models/userModel')
+const usersList = require('./seedUsers');
+const User = require('../models/userModel');
+//const zombiesList = require('./seedZombie');
+//const Zombie = require('../models/zombieModel');
+
+
 
 async function addDataToDB(){
-    await Zombie.bulkCreate(zombiesList)
-    await User.bulkCreate(usersList)
+    await User.bulkCreate(usersList);
+    //await Zombie.bulkCreate(zombiesList);
+
 }
 
 addDataToDB()

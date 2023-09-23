@@ -11,19 +11,20 @@ user_id (Foreign key)
 image_url (or a reference to the image location)?
 */
 
-const {DataTypes} = require('sequelize')
-const {connectToDb} = require('./conn')
-const User = require('./userModel')
+const {DataTypes} = require('sequelize');
+const {connectToDb} = require('../config/conn');
+//const User = require('./userModel')
 
-const People = connectToDb.define('people', {
+const Zombie = connectToDb.define('zombie', {
     zombie_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
-    },
+    }
 
     //name - ie: fast/slow/smart
 
+    /*
     user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -32,14 +33,22 @@ const People = connectToDb.define('people', {
             key: 'id'
         }
     }
+    */
+    
 
 
-}, {timestamps: false});
+}, {
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
+});
 
+/*
 Zombie.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE', //
+    onDelete: 'CASCADE', 
     onUpdate: 'CASCADE'
 })
+*/
 
 module.exports = Zombie
