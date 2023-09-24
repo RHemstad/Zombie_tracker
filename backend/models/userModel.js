@@ -11,7 +11,6 @@ updated_at
 
 const {DataTypes} = require('sequelize');
 const {connectToDb} = require('../config/conn');
-//const Zombie = require('./userModel')
 
 const User = connectToDb.define('user', {
     user_id: {
@@ -36,6 +35,8 @@ const User = connectToDb.define('user', {
     createdAt: 'created_at',
     updatedAt: 'updated_at'
 });
+
+
 
 
 module.exports = User

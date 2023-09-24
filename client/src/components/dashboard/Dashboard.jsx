@@ -1,17 +1,29 @@
 import "./dashboard.css";
 import React from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import Subheader from '../subheader/Subheader';
+import Toolbar from "../toolbar/Toolbar";
+import DashboardContainer from "../dash_child_container/DashboardContainer";
+import DashHome from "../dash_home/DashHome";
 
 const Dashboard = () => {
+
   return (
     <>
-    
-    Dashboard Page
-    Manage Your Zombie Data
+    <section>
+      THIS IS DASHBOAD
+    <h2>Manage Your Zombie Data</h2>
 
-    <p>Here, you can effortlessly manage your zombie data, ensuring everything is up-to-date and organized.</p>
 
-    View all Zombies | Add New Zombie | Edit Zombie | Delete Zombie
+    <Toolbar/>
+    <DashboardContainer/>
+
+
+
+
+
+
+
+    </section>
 
     </>
   )

@@ -11,7 +11,7 @@ const Footer = () => {
 {/* ****************************************** */}
 
 <footer> 
-<div>&#169; 2023 UFO Adventures</div><div>About</div>
+<div>&#169; 2023 Zombie Tracker</div><div>About</div>
 </footer>
   
 </>
