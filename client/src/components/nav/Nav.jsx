@@ -14,7 +14,6 @@ return (
 
 <nav className="menu">
 <ul>
-<li><Link to="/">Home</Link></li>
 <li><Link to="/dashboard">Dashboard</Link></li>
 <li><Link to="/map">Zombie Sightings</Link></li>
 

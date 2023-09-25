@@ -19,12 +19,22 @@
     margin: 0;
     font-family: var(--font-family-body);
     font-weight: var( --font-weight-regular);
-    background-color: white;
     line-height: 1.5;
     color: var(--color-text);
     width: 100%;
     height: 100%;
+
+    background: #BCD197;
+    background: radial-gradient(ellipse at center, #BCD197 0%, #325757 100%);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
     border: 2px solid blue;
+
+
+
+    
   }
 
 
@@ -40,7 +50,17 @@
     grid-template-columns: 100%;
     width: inherit;
     height: 100%;
-    border: 2px solid green;
+
+    border: 4px solid white;
+    /*background: var(--color-primary) url("../assets/images/texture.png");
+    /*background-size: contain;*/
+
+
+    background: url("../assets/images/texture.png");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+
   }
   
   
@@ -97,7 +117,6 @@
     } */
 
     section {
-      background: yellowgreen;
         color: var(--color-text);
         padding-bottom: 1rem;
         border: 2px solid purple;

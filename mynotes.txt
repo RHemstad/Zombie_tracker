@@ -13,6 +13,8 @@ npm i --save @fortawesome/free-brands-svg-icons
 
 npm i axios
 
+npm install framer-motion
+
 
 
 
