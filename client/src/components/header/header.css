@@ -12,6 +12,7 @@ header {
     min-height: 65px;
     max-height: 65px;
     height: 65px;
+    text-shadow: 0px 1px 0px #323232;
   }
   
   /* **** Logo ***** 
