@@ -9,8 +9,8 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
-    color: black;
+    color: var(--color-neutral);
+    z-index: 2000;
 }
 
 footer div:first-child {

@@ -30,7 +30,7 @@
     width: 100%;
     height: 100vh;
 
-    border: 2px solid blue;
+
 
 
 
@@ -51,7 +51,7 @@
     width: inherit;
     height: 100%;
 
-    border: 4px solid white;
+
     /*background: var(--color-primary) url("../assets/images/texture.png");
     /*background-size: contain;*/
 
@@ -119,7 +119,6 @@
     section {
         color: var(--color-text);
         padding-bottom: 1rem;
-        border: 2px solid purple;
         /*width: inherit;*/
     }
 

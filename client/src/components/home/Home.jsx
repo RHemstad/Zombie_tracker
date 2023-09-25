@@ -28,9 +28,9 @@ const Home = () => {
         <div className="cloud"></div>
     </div>
 
-    <div className="x5">
+    {/*<div className="x5">
         <div className="cloud"></div>
-    </div>
+  </div> */}
 
 </div>
 <div id="hole" className="bounceIn"></div>
