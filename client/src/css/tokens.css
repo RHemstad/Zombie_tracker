@@ -48,21 +48,23 @@
    
     /**************** CORE COLOR PALETTE ****************/
 
-    --color-neutral: #fafaf9; 
-    --color-primary: #213345;
+    --color-white: #fff;
+    --color-neutral:  rgb(234, 184, 99);
+
+    --color-primary: var(--color-white);
     --color-secondary: #26475D;
-    --color-tertiary: #767576;
+    --color-tertiary: #691c01; /* #767576;*/
 
  /**************** BUTTON PRIMARY ****************/
---color-button-background-primary-normal: var(--color-primary);
---color-button-background-primary-hover: var(--color-tertiary);
---color-button-background-primary-active: var(--color-secondary);
---color-button-background-primary-disabled: var(--color-neutral);
+--color-button-background-primary-normal: #9B2902;
+--color-button-background-primary-hover: #691c01;
+--color-button-background-primary-active: #691c01;
+--color-button-background-primary-disabled: pink;
 
---color-button-text-primary-normal: var(--color-neutral);
---color-button-text-primary-hover: var(--color-neutral);
---color-button-text-primary-active: var(--color-neutral);
---color-button-text-primary-disabled: var(--color-primary);
+--color-button-text-primary-normal: var(--color-white);
+--color-button-text-primary-hover: var(--color-white);
+--color-button-text-primary-active: var(--color-white);
+--color-button-text-primary-disabled: var(--color-white);
 
 
 /**************** LINKS ****************/
@@ -85,7 +87,7 @@
 
 
 /**************** TEXT ****************/
---color-text: var(--color-primary);
+--color-text: var(--color-white);
 
 
 /**************** BOX SHADOW ****************/

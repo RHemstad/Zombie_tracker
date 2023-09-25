@@ -3,7 +3,6 @@
 /* ****************************** */
 
 header {
-    background-color: pink;
     width: inherit;
     padding-inline: var(--spacing-md);
     display: flex;

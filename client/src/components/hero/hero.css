@@ -3,27 +3,39 @@
 /* *********************** HERO ***************************** */
 /* ******************************************************************* */
 
-#hero {
+#hero_wrapper {
+    z-index: 1000;
     text-align: center;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: white;
-   /*background: var(--color-primary) url("../../assets/images/hero_alien.png") no-repeat center center;
-   background-size: cover; */
+    height: 100%;
    overflow: hidden;
    color: var(--color-neutral);
-   padding: var(--spacing-xx-lg);
-   min-height: 600px;
+   /*min-height: 600px;*/
+   display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #hero_wrapper div {
+    position: fixed;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xx-lg);
+    border-radius: var(--border-radius-medium);
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
 .hero p {
     max-width: 45ch;
-    padding: var(--spacing-xx-lg);
-    border: 1px solid green;
     color: black;
+    font-weight: bold;
 }
 
 .hero h2 {
