@@ -107,7 +107,7 @@ const Register = () => {
 
   return (
     <>
-    <section>
+    <section id="register" className="glass-effect">
 
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
     <h2>Register</h2>
@@ -138,9 +138,8 @@ const Register = () => {
             onBlur={() => setUserFocus(false)}
         />
         <p id="uidnote" className={userFocus && username && !validName ? "instructions" : "offscreen"}>
-            <FontAwesomeIcon icon={faInfoCircle} />
-            4 to 24 characters.<br />
-            Must begin with a letter.<br />
+            <FontAwesomeIcon icon={faInfoCircle} />4 to 24 characters.
+            Must begin with a letter.
             Letters, numbers, underscores, hyphens allowed.
         </p>
 
@@ -166,9 +165,8 @@ const Register = () => {
             onBlur={() => setPwdFocus(false)}
         />
         <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
-            <FontAwesomeIcon icon={faInfoCircle} />
-            8 to 24 characters.<br />
-            Must include uppercase and lowercase letters, a number and a special character.<br />
+            <FontAwesomeIcon icon={faInfoCircle} />8 to 24 characters.
+            Must include uppercase and lowercase letters, a number and a special character.
             Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
         </p>
 
@@ -201,12 +199,11 @@ const Register = () => {
     </form>
     {/* END FORM */}
 
-    <p>
-        Already registered?<br />
-        <span className="line">
+    <p>Already registered?<br />
+    <span className="line">
             {/*put router link here*/}
             <a href="#">Sign In</a>
-        </span>
+    </span>
     </p>
 
 

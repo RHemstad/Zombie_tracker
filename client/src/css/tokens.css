@@ -49,11 +49,18 @@
     /**************** CORE COLOR PALETTE ****************/
 
     --color-white: #fff;
+    --color-black: #000;
     --color-neutral:  rgb(234, 184, 99);
 
     --color-primary: var(--color-white);
     --color-secondary: #26475D;
     --color-tertiary: #691c01; /* #767576;*/
+
+    --color-alert: red;
+    --color-success: green;
+    --color-info: blue;
+
+  
 
  /**************** BUTTON PRIMARY ****************/
 --color-button-background-primary-normal: #9B2902;
@@ -88,6 +95,7 @@
 
 /**************** TEXT ****************/
 --color-text: var(--color-white);
+--color-text-alt: var(--color-black);
 
 
 /**************** BOX SHADOW ****************/

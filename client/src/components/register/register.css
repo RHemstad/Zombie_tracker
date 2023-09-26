@@ -1,58 +1,67 @@
+#register {
+    max-width: 420px;
+    min-width: 420px;
+    height: fit-content;
+}
+
 section {
     width: 100%;
-    max-width: 420px;
-    min-height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-md);
     /*background-color: rgba(0,0,0,0.4);*/
+    color: var(--color-text);
 }
+
+
 
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+   /* justify-content: space-evenly;*/
     flex-grow: 1;
     padding-bottom: 1rem;
+    width: inherit;
+    max-height: 400px;
 }
 
-a, a:visited {
-    color: #fff;
+label {
+    color: var(--color-text-alt);
 }
 
 input[type="text"],
 input[type="password"],
-button,
 textarea {
-  font-family: 'Nunito', sans-serif;
-  font-size: 22px;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
+  padding: var(--spacing-xx-sm);
+  border-radius: var(--size-border-radius-small);
 }
 
-label,
+
+
+
 button {
-  margin-top: 1rem;
+  margin-top: var(--spacing-md);
 }
 
 button {
-  padding: 0.5rem;
+  padding: var(--spacing-x-sm);
 }
 
 .instructions {
-    font-size: 0.75rem;
-    border-radius: 0.5rem;
-    background: #000;
-    color: #fff;
-    padding: 0.25rem;
+    font-size: var(--font-size-small);
+    border-radius: var(--size-border-radius-medium);
+    background: var(--color-alert);
+    color: var(--color-text);
+    padding: var(--spacing-xx-sm);
     position: relative;
-    bottom: -10px;
+    bottom: 0;
 }
 
 .instructions > svg {
-    margin-right: 0.25rem;
+    margin-right: var(--spacing-xx-sm);
 }
 
 .offscreen {
@@ -65,21 +74,21 @@ button {
 }
 
 .valid {
-    color: limegreen;
-    margin-left: 0.25rem;
+    color: green;
+    margin-left: var(--spacing-xx-sm);
 }
 
 .invalid {
-    color: red;
-    margin-left: 0.25rem;
+    color: var(--color-tertiary);
+    margin-left: var(--spacing-xx-sm)
 }
 
 .errmsg {
-    background-color: lightpink;
-    color: firebrick;
-    font-weight: bold;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    background-color: var(--color-alert);
+    color: var(--color-text);
+    font-weight: var(--font-weight-bold);
+    padding: var(--spacing-x-sm);
+    margin-bottom: var(--spacing-x-sm);
 }
 
 .line {
