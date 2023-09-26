@@ -15,4 +15,32 @@ async function getAllUsers(req, res) {
     }
 };
 
-module.exports = {getAllUsers}
+/* *********************** */
+/* *** ADD A USER ******** */
+/* *********************** */
+
+/*
+    {
+        "user_id": 1,
+        "username": "Bexy",
+        "password": "Bexy1234!",
+        "created_at": "2023-09-24T19:59:40.734Z",
+        "updated_at": "2023-09-24T19:59:40.734Z"
+    },
+*/
+
+async function addUser(req, res) {
+    try {
+        const user = req.body;
+        const newUser = await Users.create(user);
+        res.status(201).json(newUser);
+ 
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({message: error})
+    }
+}
+
+
+
+module.exports = {getAllUsers, addUser}

@@ -15,4 +15,30 @@ async function getAllZombies(req, res) {
     }
 };
 
-module.exports = {getAllZombies}
+/* *************************** */
+/**** ADD A ZOMBIE ********* */
+
+/*
+    {
+        "type": "Slow",
+        "id": "US",
+        "name": "United States",
+        "value": 100,
+        "notes": "these are notes affiliated with this zombie",
+        "user_id": 1
+    },
+*/
+
+async function addZombie(req, res) {
+    try {
+        const zombie = req.body;
+        const newZombie = await Zombies.create(zombie);
+        res.status(201).json(newZombie);
+ 
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({message: error})
+    }
+}
+
+module.exports = {getAllZombies, addZombie}

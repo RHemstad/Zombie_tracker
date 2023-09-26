@@ -13,7 +13,7 @@ try{
     return true;
 
 } catch (error) {
-    console.error("the tables were not created, here is the error" , error);
+    console.error("the tables were not created, here is the error", error);
     return false;
 }
 
