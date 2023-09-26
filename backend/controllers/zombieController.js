@@ -1,5 +1,6 @@
 //Get the data from the database
 const Zombies = require('../models/zombieModel');
+const Users = require('../models/userModel');
 
 
 /* *************************** */

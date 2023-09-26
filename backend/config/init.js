@@ -5,10 +5,10 @@ const Zombie = require("../models/zombieModel");
 async function initializeDB(){
 
 try{
-    await Zombie.drop();
-    await Zombie.sync(); //needs to come first because it looks at user
+    await Zombie.drop(); //needs to come first because it looks at user
     await User.drop();
     await User.sync();
+    await Zombie.sync(); //needs to come second because it looks at user
 
     console.log("The tables were successfully created");
     return true;

@@ -4,7 +4,7 @@ const app = express();
 const port = 3500;
 
 //const {testConnection} = require('./models/conn');
-const registerRoutes = require("./routers/userRoutes");
+const userRoutes = require("./routers/userRoutes");
 const zombieRoutes = require("./routers/zombieRoutes");
 //const registerUserRoutes = require("./routers/registerUserRoutes");
 
@@ -16,7 +16,7 @@ app.get("/", (req, res)=>{
     res.status(200).json("This is our home route")
 });
 
-app.use("/users", registerRoutes);
+app.use("/users", userRoutes);
 app.use("/zombies", zombieRoutes);
 //app.use("/register", registerUserRoutes);
 
