@@ -27,6 +27,10 @@ async function getAllUsers(req, res) {
         "created_at": "2023-09-24T19:59:40.734Z",
         "updated_at": "2023-09-24T19:59:40.734Z"
     },
+
+            "user_id": 3,
+        "username": "Wilma",
+        "password": "Wilma1234!"
 */
 
 async function addUser(req, res) {
