@@ -38,7 +38,6 @@ async function addUser(req, res) {
         const user = req.body;
         const newUser = await Users.create(user);
         res.status(201).json(newUser);
- 
     } catch (error) {
         console.log(error)
         res.status(500).json({message: error})
