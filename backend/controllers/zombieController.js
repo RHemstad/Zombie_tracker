@@ -1,6 +1,7 @@
 //Get the data from the database
 const Zombies = require('../models/zombieModel');
 
+
 /* *************************** */
 /**** GET ALL ZOMBIES ********* */
 
@@ -10,7 +11,6 @@ async function getAllZombies(req, res) {
         const results = await Zombies.findAll()
         res.status(200).json(results)
     } catch (error) {
-        console.log(error)
         res.status(500).json({message: error})
     }
 };
@@ -32,11 +32,16 @@ async function getAllZombies(req, res) {
 async function addZombie(req, res) {
     try {
         const zombie = req.body;
-        const newZombie = await Zombies.create(zombie);
-        res.status(201).json(newZombie);
- 
+
+        if(zombie.type == null || zombie.id == null || zombie.name == null || zombie.value == null || zombie.notes == null || zombie.user_id == null) {
+            res.status(400).json({message: "Please provide all required fields"})
+            return
+        } else {
+            const newZombie = await Zombies.create(zombie);
+            res.status(201).json(newZombie);
+        }
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         res.status(500).json({message: error})
     }
 }

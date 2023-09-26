@@ -13,7 +13,7 @@ image_url (or a reference to the image location)?
 
 const {DataTypes} = require('sequelize');
 const {connectToDb} = require('../config/conn');
-const User = require('./userModel')
+//const User = require('./userModel');
 
 const Zombie = connectToDb.define('zombie', {
     zombie_id: {
@@ -48,11 +48,11 @@ const Zombie = connectToDb.define('zombie', {
     },
     user_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'users',
-            key: 'user_id'
-        }
+        allowNull: true,
+        //references: {
+        //    model: 'users',
+        //    key: 'user_id'
+       // }
     },
 }, {
     timestamps: true,
@@ -60,10 +60,12 @@ const Zombie = connectToDb.define('zombie', {
     updatedAt: 'updated_at'
 });
 
+/*
 Zombie.belongsTo(User, {
-    foreignKey: 'user_id',
-   // onDelete: 'CASCADE', //
-   // onUpdate: 'CASCADE'
+foreignKey: 'user_id',
+   onDelete: 'CASCADE',
+   onUpdate: 'CASCADE'
 })
+*/
 
 module.exports = Zombie
