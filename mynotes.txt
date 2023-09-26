@@ -47,3 +47,9 @@ Cors error:
 has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The value of the 'Access-Control-Allow-Credentials' header in the response is '' which must be 'true' when the request's credentials mode is 'include'. The credentials mode of requests initiated by the XMLHttpRequest is controlled by the withCredentials attribute.
 for localhost get the plugin
 https://mybrowseraddon.com/access-control-allow-origin.html
+
+
+postman post
+https://apidog.com/articles/how-to-send-json-post-reques-with-postman/
+
+
