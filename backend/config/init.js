@@ -1,7 +1,6 @@
 const {connectToDB} = require("./conn");
 const User = require("../models/userModel");
 const Zombie = require("../models/zombieModel");
-const People = require('../models/peopleModel');
 
 async function initializeDB(){
 
@@ -11,8 +10,6 @@ try{
     await User.drop();
     await User.sync();
 
-
-    await People.sync();
     console.log("The tables were successfully created");
     return true;
 
