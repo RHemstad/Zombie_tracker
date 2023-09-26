@@ -6,7 +6,7 @@ const port = 3500;
 //const {testConnection} = require('./models/conn');
 const registerRoutes = require("./routers/userRoutes");
 const zombieRoutes = require("./routers/zombieRoutes");
-const peepsRoutes = require('./routers/peopleRoutes')
+
 //const registerUserRoutes = require("./routers/registerUserRoutes");
 
 app.use(cors());
@@ -19,7 +19,6 @@ app.get("/", (req, res)=>{
 
 app.use("/users", registerRoutes);
 app.use("/zombies", zombieRoutes);
-app.use('/people', peepsRoutes)
 //app.use("/register", registerUserRoutes);
 
 app.listen(port, () => {
