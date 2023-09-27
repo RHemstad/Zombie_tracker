@@ -9,7 +9,7 @@ const DashboardContainer = () => {
     <>
 
 
-<section>
+<section className="dash-container">
 This is dashboard container with the routes
 How do I load home here via routes because I need the toolbar links to be able to populate
 this dash_child_container with the correct content

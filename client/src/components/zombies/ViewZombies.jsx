@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import apiConn from '../../api/axios';
 
 const ViewZombies = ({zombies}) => {
 
@@ -13,9 +14,10 @@ const ViewZombies = ({zombies}) => {
 */
 
 
+
   return (
     <>
-    
+    <h3>THIS IS VIEW ZOMBIES COMPONENT</h3>
     {zombies.map(zombie => {  
     return (
         <div key={zombie.zombie_id}>

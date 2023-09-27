@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link, useNavigate } from "react-router-dom";
 
-const Toolbar = () => {
+const Toolbar = ({zombie, setZombies}) => {
     const navigate = useNavigate();
   return (
     <>
 
-
 <nav id="dashboard-nav">
-    <button>View All Zombies</button><button>Add New Zombie</button><button>Edit Zombie</button><button>Delete Zombie</button>
+    <button onClick={e => {setZombies(!zombie);}}>View All Zombies</button>
+    <button onClick={e => {setZombies(!zombie);}}>Add New Zombie</button>
+    <button onClick={e => {setZombies(!zombie);}}>Edit zombie</button>
+    <button onClick={e => {setZombies(!zombie);}}>Delete Zombie</button>
     </nav>
     <nav>
     <li><Link to="/dashboard/map">Zombie Sightings</Link></li>
