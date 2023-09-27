@@ -5,9 +5,7 @@ import * as am5map from "@amcharts/amcharts5/map";
 import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
-
 class Map extends Component {
-
   componentDidMount() {
 
 let root = am5.Root.new("chartdiv");
@@ -21,7 +19,7 @@ let chart = root.container.children.push(
 
 //Define Data
  /* Chart code */
- let data = [
+ let zombieLocations = [
   {
     id: "US",
     name: "United States",
@@ -56,6 +54,11 @@ let chart = root.container.children.push(
     value: 100
   }
 ];
+
+
+
+
+
 
 
 // Create Polygon Series
@@ -141,7 +144,7 @@ bubbleSeries.set("heatRules", [
   }
 ]);
 
-bubbleSeries.data.setAll(data);
+bubbleSeries.data.setAll(zombieLocations);
 
 updateData();
 setInterval(function() {
@@ -150,7 +153,7 @@ setInterval(function() {
 
 function updateData() {
   for (var i = 0; i < bubbleSeries.dataItems.length; i++) {
-    bubbleSeries.data.setIndex(i, { value: Math.round(Math.random() * 100), id: data[i].id, name: data[i].name })
+    bubbleSeries.data.setIndex(i, { value: Math.round(Math.random() * 100), id: zombieLocations[i].id, name: zombieLocations[i].name })
   }
 }
 

@@ -1,25 +1,31 @@
 import "./dashboard.css";
-import React from 'react';
-import Subheader from '../subheader/Subheader';
+import React, {useState} from 'react';
 import Toolbar from "../toolbar/Toolbar";
-import DashboardContainer from "../dash_child_container/DashboardContainer";
 import DashHome from "../dash_home/DashHome";
+import AddZombies from "../zombies/AddZombies";
+import ZombieList from "../zombies/ZombieList";
 
+//https://stackoverflow.com/questions/71108354/dynamic-react-toggle-button-for-multiple-elements
 const Dashboard = () => {
+  const [zombie, setZombies] = useState(false);
 
   return (
     <>
     <section>
-      THIS IS DASHBOAD
+    <div className="header">
     <h2>Manage Your Zombie Data</h2>
+    </div>
 
+<div className="toolbar">
+<Toolbar zombie={zombie} setZombies={setZombies}/>
+</div>
 
-    <Toolbar/>
-    <DashboardContainer/>
+<div className="dash-content">
+    {/*zombie && <DashboardContainer/>*/}
+    {/*zombie ? <AddZombies/> : <DashHome/>*/}
+    {zombie ? <ZombieList/> : <DashHome/>}
 
-
-
-
+</div>
 
 
 
