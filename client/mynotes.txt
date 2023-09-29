@@ -10,6 +10,7 @@ Backend
 //npm i express nodemon
 //npm i sequelize pg pg-hstore
 //npm i cors
+//npm i bcrypt
 
 
 

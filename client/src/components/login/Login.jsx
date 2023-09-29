@@ -1,5 +1,5 @@
 import {useRef, useState, useEffect, useContext } from 'react'
-import AuthContext from '../../context/AuthContext'
+import AuthContext from '../../context/AuthProvider'
 import Button from '../button/Button';
 import axios from '../../api/axios';
 
@@ -76,7 +76,7 @@ const Login = () => {
     {/* error message at top */}
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 
-    <h2>Register</h2>
+    <h2>Login</h2>
 
 {/* START FORM */}
 <form onSubmit={handleSubmit}>
