@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   return (
     <>
-    <section>
+    <section className="dashbord">
     <div className="header">
     <h2>Manage Your Zombie Data</h2>
     </div>

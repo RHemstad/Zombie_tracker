@@ -2,7 +2,7 @@
 /* *********************** DASHBOARD ***************************** */
 /* ******************************************************************* */
 
-section {
+section.dashboard {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
@@ -14,7 +14,7 @@ section {
     gap: var(--spacing-md);
     height: 100%;
     width: 100%;
-    border: 8px solid green;
+    border: 8px solid red;
 }
 
 .header {

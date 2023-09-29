@@ -11,6 +11,7 @@ footer {
     flex-direction: row;
     color: var(--color-neutral);
     z-index: 2000;
+    background-color: #2D2D2D;
 }
 
 footer div:first-child {

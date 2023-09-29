@@ -1,15 +1,14 @@
-import './animate.css';
 import './home.css';
-
 import React from 'react';
 import Hero from '../hero/Hero';
+import zombieHand from '../../assets/images/hand.svg';
+import grass from '../../assets/images/grass.svg';
+import moregrass from '../../assets/images/grass2.svg';
+import moon from '../../assets/images/moon.svg';
 
 const Home = () => {
   return (
     <>
-
-
-
 
 <div id="cloud-wrap">
 <div className="x1">
@@ -33,18 +32,15 @@ const Home = () => {
   </div> */}
 
 </div>
-<div id="hole" className="bounceIn"></div>
-<div id="moon-wrap" className="drop"><div id="moon"></div></div>
-<div id="hand" className="bounceInUp"></div>
-<div id="grass" className="bounce-7"></div>
-<div id="grass2" className="bounceIn"></div>
+
+
+<div className="moon"><img src={moon} alt="moon"/></div>
+<div className="hand"><img src={zombieHand} alt="zombie hand"/></div>
+<div className="grass"><img src={grass} alt="dead grass"/></div>
+<div className="grass2"><img src={moregrass} alt="more dead grass"/></div>
 
 <Hero/>
-
-
-
-
-    </>
+</>
   )
 }
 
