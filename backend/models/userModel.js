@@ -4,7 +4,7 @@ Users Table:
 user_id (Primary key)
 username
 password (hashed and salted)
-email
+roles
 created_at
 updated_at
 */
@@ -28,7 +28,16 @@ const User = connectToDb.define('user', {
     password: {
         type: DataTypes.STRING,
         allowNull: false
-    }
+    },
+    //todo add roles
+    //roles: {
+      //  User: {
+          //  type: DataTypes.INTEGER,
+          //  default: 2001
+        //}//,
+        //Editor: Number,
+        //Admin: Number
+    //},
 
 }, {
     timestamps: true,

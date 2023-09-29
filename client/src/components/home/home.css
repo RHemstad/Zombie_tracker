@@ -177,6 +177,7 @@
 }
 .hand {
   position: fixed;
+  z-index: 80;
   bottom: -100%;
   opacity:0;
   left: 50%;
