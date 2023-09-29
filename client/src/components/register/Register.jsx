@@ -1,16 +1,21 @@
 
+import '../../css/forms.css'
 import './register.css'
 import { useRef, useState, useEffect} from 'react';
 import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '../button/Button';
 import axios from '../../api/axios';
+import { Link, useNavigate } from "react-router-dom";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = 'http://localhost:3500/register'; //endpoint for registration in backend
 
+
+//Register - aka sign up, create account
 const Register = () => {
+    const navigate = useNavigate();
     const userRef = useRef();
     const errRef = useRef();
 
@@ -55,8 +60,8 @@ const Register = () => {
         //const result = PWD_REGEX.test(password);
         //console.log(result);
         //console.log(password);
-        //const match = password === matchPwd;
-        //setValidMatch(match);
+        const match = password === matchPwd;
+        setValidMatch(match);
     }, [password, matchPwd])
 
     useEffect(() => {
@@ -195,23 +200,16 @@ const Register = () => {
             Must match the first password input field.
         </p>
 
-        <Button className="disabled" disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</Button>
+        <button className="primary-button" disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
     </form>
     {/* END FORM */}
 
     <p>Already registered?<br />
     <span className="line">
-            {/*put router link here*/}
-            <a href="#">Sign In</a>
+
+            <Link to="/login">Login</Link>
     </span>
     </p>
-
-
-
-
-
-
-
     </section>
     </>
   )
