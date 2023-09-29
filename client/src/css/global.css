@@ -82,6 +82,7 @@
   h1 {
     font-size: var(--font-size-h1);
     color: var(--color-neutral);
+    white-space: nowrap;
   }
         
     h2 {
