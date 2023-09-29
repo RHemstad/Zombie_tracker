@@ -3,10 +3,11 @@ import AuthContext from '../../context/AuthProvider'
 import Button from '../button/Button';
 import axios from '../../api/axios';
 
-//const LOGIN_URL = 'http://localhost:3500/register';
-const LOGIN_URL = 'http://localhost:3500/api/auth/login';
+const LOGIN_URL = 'http://localhost:3500/login';
+//todo set up stricter authentication
+//const LOGIN_URL = 'http://localhost:3500/api/auth/login';
 const Login = () => {
-    const { setAuth } = useContext(AuthContext);
+    //const { setAuth } = useContext(AuthContext);
 
     //ref to set focus on input
     const userRef = useRef();

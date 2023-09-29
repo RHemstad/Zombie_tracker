@@ -25,7 +25,6 @@ async function getAllRegisteredUsers(req, res) {
         "password": "Wilma1234!"
 */
 
-
 async function addRegisteredUser(req, res) {
     try {
         const user = req.body;
