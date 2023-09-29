@@ -1,5 +1,6 @@
 //Get the data from the database
 const Users = require('../models/userModel');
+const bcrypt = require('bcrypt');
 
 /* *************************** */
 /* *** GET ALL REGISTERED USERS ********* */
@@ -15,7 +16,7 @@ async function getAllRegisteredUsers(req, res) {
 };
 
 /* *********************** */
-/* *** ADD A REGISTERED USER ******** */
+/* *** ADD A NEW USER ******** */
 /* *********************** */
 
 /*
@@ -34,6 +35,10 @@ async function addRegisteredUser(req, res) {
         res.status(500).json({message: error})
     }
 }
+
+
+
+
 
 
 module.exports = {getAllRegisteredUsers, addRegisteredUser}

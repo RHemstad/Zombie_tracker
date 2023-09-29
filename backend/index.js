@@ -7,6 +7,7 @@ const port = 3500;
 const userRoutes = require("./routers/userRoutes");
 const zombieRoutes = require("./routers/zombieRoutes");
 const registerUserRoutes = require("./routers/registerUserRoutes");
+const loginRoutes = require("./routers/loginRoutes");
 
 app.use(cors());
 app.use(express.json());
@@ -19,6 +20,7 @@ app.get("/", (req, res)=>{
 app.use("/users", userRoutes);
 app.use("/zombies", zombieRoutes);
 app.use("/register", registerUserRoutes);
+app.use("/login", loginRoutes);
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)

@@ -1,0 +1,14 @@
+exports.hooks = {
+    afterCreate: (User, payload) => {
+        AddUserRole(User, payload);
+    }
+}
+
+function AddUserRole(User, payload) {
+    let InsertArr = {
+        user_id: User._id,
+        role_id: 1 // pass default role id
+
+    }
+    model.UserRole.create(InsertArr);
+}
