@@ -24,7 +24,12 @@ const Content = () => {
        <Route path="/map" element={<Map />} />
        <Route path="/register" element={<Register />} />
        <Route path="/login" element={<Login />} />
+
+       {/* these routes need to be protected */}
        <Route path="/dashboard/*" element={<Dashboard />} />
+
+       {/* 404 */}
+        <Route path="*" element={<Missing/> } />
    </Routes>
     </main>
     

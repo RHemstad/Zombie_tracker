@@ -46,17 +46,28 @@
   }
   
 
-  /* ************************************************************ */
-  /* DISABLED BUTTON */
-  /* ************************************************************ */      
-  
-  .disabled {
+/* ************************************************************ */
+/* DISABLED BUTTON */
+/* ************************************************************ */  
 
-    
+/* TODO: confirm disabled button styling passes accessibility */
+  
+.primary-button:disabled,
+.primary-button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  width: 100%;
   }
 
 
+/* ************************************************************ */
+/* PRIMARY BUTTON FORM */
+/* ************************************************************ */      
 
+form .primary-button {
+  width: 100%;
+}
 
 
 

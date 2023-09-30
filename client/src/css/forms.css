@@ -1,0 +1,78 @@
+
+
+form {
+    display: flex;
+    flex-direction: column;
+   /* justify-content: space-evenly;*/
+    flex-grow: 1;
+    padding-bottom: 1rem;
+    width: inherit;
+    max-height: 400px;
+}
+
+label {
+    color: var(--color-text-alt);
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  padding: var(--spacing-xx-sm);
+  border-radius: var(--size-border-radius-medium);
+}
+
+
+
+
+button {
+  margin-top: var(--spacing-md);
+}
+
+button {
+  padding: var(--spacing-x-sm);
+}
+
+.instructions {
+    font-size: var(--font-size-small);
+    border-radius: var(--size-border-radius-medium);
+    background: var(--color-alert);
+    color: var(--color-text);
+    padding: var(--spacing-xx-sm);
+    position: relative;
+    bottom: 0;
+}
+
+.instructions > svg {
+    margin-right: var(--spacing-xx-sm);
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: green;
+    margin-left: var(--spacing-xx-sm);
+}
+
+.invalid {
+    color: var(--color-tertiary);
+    margin-left: var(--spacing-xx-sm)
+}
+
+.errmsg {
+    background-color: var(--color-alert);
+    color: var(--color-text);
+    font-weight: var(--font-weight-bold);
+    padding: var(--spacing-x-sm);
+    margin-bottom: var(--spacing-x-sm);
+}
+
+.line {
+    display: inline-block;
+}

@@ -1,13 +1,22 @@
-import {useRef, useState, useEffect, useContext } from 'react'
-import AuthContext from '../../context/AuthProvider'
+import './login.css';
+import '../../css/forms.css';
+import {useRef, useState, useEffect} from 'react';
+import useAuth from '../../hooks/useAuth';
+
 import Button from '../button/Button';
 import axios from '../../api/axios';
+import { Link, useNavigate } from "react-router-dom";
 
 const LOGIN_URL = 'http://localhost:3500/login';
 //todo set up stricter authentication
 //const LOGIN_URL = 'http://localhost:3500/api/auth/login';
+
+
+//Login - aka sign in to existing account
+//Using the term ‘login’ means that at a glance the user can instantly tell the difference between ‘Login’ and ‘Sign up’.
 const Login = () => {
-    //const { setAuth } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const { setAuth } = useAuth();
 
     //ref to set focus on input
     const userRef = useRef();
@@ -73,7 +82,7 @@ const Login = () => {
 
   return (
     <>
-    <section id="register" className="glass-effect">
+    <section id="login" className="glass-effect">
     {/* error message at top */}
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 
@@ -97,7 +106,7 @@ const Login = () => {
         {/* **** PASSWORD **** */}
         {/* ******************* */}
 
-<label htmlFor="password">Username</label>
+<label htmlFor="password">Password</label>
     <input
         type="password"
         id="pasword"
@@ -106,15 +115,14 @@ const Login = () => {
         required
     />
 
-    <button type="submit">Sign In</button>
+    <Button className="primary-button" type="submit">Login</Button>
 </form>
 
     {/* END FORM */}
 
     <p>Need an Account?<br />
     <span className="line">
-            {/*put router link here*/}
-            <a href="#">Sign Up (Register)</a>
+            <Link to="/register">Sign Up</Link>
     </span>
     </p>
 
