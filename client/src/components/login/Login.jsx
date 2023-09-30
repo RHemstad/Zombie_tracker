@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 
 import Button from '../button/Button';
 import axios from '../../api/axios';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
@@ -18,8 +18,10 @@ const LOGIN_URL = 'http://localhost:3500/login';
 //Login - aka sign in to existing account
 //Using the term ‘login’ means that at a glance the user can instantly tell the difference between ‘Login’ and ‘Sign up’.
 const Login = () => {
-    const navigate = useNavigate();
     const { setAuth } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/home';
 
     //ref to set focus on input
     const userRef = useRef();
@@ -86,17 +88,6 @@ const Login = () => {
   return (
     <>
 
-{/* ******************** */}
-{/* HEADER */}
-{/* ******************** */}
-
-<Header />
-
-{/* ******************** */}
-{/* MAIN */}
-{/* ******************** */}
-
-    <main>
     <section id="login" className="glass-effect">
     {/* error message at top */}
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
@@ -141,16 +132,6 @@ const Login = () => {
     </span>
     </p>
 </section>
-    
-    
-</main>
-
-{/* ******************** */}
-{/* FOOTER */}
-{/* ******************** */}
-    
-<Footer />
-    
     
     
     </>

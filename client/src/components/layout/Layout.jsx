@@ -1,16 +1,11 @@
 import { Outlet } from "react-router-dom";
 
+
 const Layout = () => {
     return (
-        <>
-{/* should this be main */}
-        <div className="App">
+        <main>
             <Outlet />
-        </div>
-
-
-
-        </>
+        </main>
     )
 }
 

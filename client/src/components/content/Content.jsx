@@ -11,7 +11,7 @@ const Content = () => {
   return (
     <>
  
- <main>
+
 
 {/* ******************** */}
 {/* BACKGROUND ANIMATION */}
@@ -51,7 +51,7 @@ const Content = () => {
 
 
 
-</main>
+
     
     </>
   )

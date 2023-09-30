@@ -150,8 +150,17 @@
 /* *********************************** */
 /* ************* MAIN ************** */
 /* *********************************** */
-
-/* see content.css in content components */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ /* background: var(--color-neutral);*/
+  color: var(--color-text);
+  /*background-image: url("../../assets/images/background.svg");*/
+  background-repeat: repeat;
+  background-size: 30%;
+}
 
 /* *********************************** */
 /* ************* FOOTER ************** */
