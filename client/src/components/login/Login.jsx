@@ -7,8 +7,6 @@ import Button from '../button/Button';
 import axios from '../../api/axios';
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
 
 const LOGIN_URL = 'http://localhost:3500/login';
 //todo set up stricter authentication
@@ -21,7 +19,7 @@ const Login = () => {
     const { setAuth } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location?.state?.from?.pathname || '/home';
+    const from = location?.state?.from?.pathname || '/dashboard';
 
     //ref to set focus on input
     const userRef = useRef();
@@ -31,8 +29,7 @@ const Login = () => {
     const [username, setUser] = useState('');
     const [password, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
-    //for testing only
-    const [success, setSuccess] = useState(false);
+ 
 
     /* **************************** */
     /* **** USE EFFECT ************ */
@@ -68,7 +65,7 @@ const Login = () => {
             //setAuth({ username, password, roles, accessToken });
             setUser('');
             setPwd('');
-            setSuccess(true);
+            navigate(from, {replace: true});
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -81,8 +78,6 @@ const Login = () => {
             }
             errRef.current.focus();
         }
-
-
     }
 
   return (

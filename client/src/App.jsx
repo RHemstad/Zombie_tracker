@@ -9,6 +9,13 @@ import Missing from './components/missing/Missing';
 import Layout from './components/layout/Layout';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Admin from './components/admin/Admin';
+
+//object lookup for auto complete
+//not great for security but this is just a demo
+const ROLES = {
+  'User': 2001
+}
 
 
 const App = () => {
@@ -26,10 +33,12 @@ const App = () => {
        <Route path="/login" element={<Login />} />
 
     {/* these routes are protected */}
-    <Route element={<RequireAuth />}>
+     {/* for demo - everyone is assigned 2001 role - aka user */}
+    <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
        {/* these routes need to be protected */}
          {/* home is dashboard */}
        <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="admin" element={<Admin />} />
     </Route>
 
        {/* 404 */}
