@@ -1,7 +1,8 @@
 import './login.css';
-import '../../css/forms.css'
-import {useRef, useState, useEffect, useContext } from 'react'
-import AuthContext from '../../context/AuthProvider'
+import '../../css/forms.css';
+import {useRef, useState, useEffect} from 'react';
+import useAuth from '../../hooks/useAuth';
+
 import Button from '../button/Button';
 import axios from '../../api/axios';
 import { Link, useNavigate } from "react-router-dom";
@@ -15,7 +16,7 @@ const LOGIN_URL = 'http://localhost:3500/login';
 //Using the term ‘login’ means that at a glance the user can instantly tell the difference between ‘Login’ and ‘Sign up’.
 const Login = () => {
     const navigate = useNavigate();
-    //const { setAuth } = useContext(AuthContext);
+    const { setAuth } = useAuth();
 
     //ref to set focus on input
     const userRef = useRef();
