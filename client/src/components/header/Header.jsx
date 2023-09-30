@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
 <header className="header">
-<h1><Link to="/">Zombie Tracker</Link></h1>
+<h1><Link to="/home">Zombie Tracker</Link></h1>
 <Nav />
 </header>
         

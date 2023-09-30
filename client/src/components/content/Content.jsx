@@ -1,38 +1,57 @@
 import './content.css';
 import React, {useState, useEffect} from 'react';
-import {Route, Routes, Navigate} from 'react-router-dom'
-import Home from '../home/Home';
-import Dashboard from '../dashboard/Dashboard';
-import Map from '../map/Map';
-import Register from '../register/Register';
-import Login from '../login/Login';
-import DashboardContainer from '../dash_child_container/DashboardContainer';
-
-
-
-import apiConn from '../../api/axios';
+import Hero from '../hero/Hero';
+import zombieHand from '../../assets/images/hand.svg';
+import grass from '../../assets/images/grass.svg';
+import moregrass from '../../assets/images/grass2.svg';
+import moon from '../../assets/images/moon.svg';
 
 const Content = () => {
 
-
-
   return (
     <>
-    <main>
-    <Routes>
-       <Route path="/" element={<Home />} />
-       <Route path="/map" element={<Map />} />
-       <Route path="/register" element={<Register />} />
-       <Route path="/login" element={<Login />} />
+ 
+ <main>
 
-       {/* these routes need to be protected */}
-       <Route path="/dashboard/*" element={<Dashboard />} />
+{/* ******************** */}
+{/* BACKGROUND ANIMATION */}
+{/* ******************** */}
 
-       {/* 404 */}
-        <Route path="*" element={<Missing/> } />
-   </Routes>
-    </main>
-    
+<div id="cloud-wrap">
+<div className="x1">
+        <div className="cloud"></div>
+    </div>
+
+    <div className="x2">
+        <div className="cloud"></div>
+    </div>
+
+    <div className="x3">
+        <div className="cloud"></div>
+    </div>
+
+    <div className="x4">
+        <div className="cloud"></div>
+    </div>
+
+    {/*<div className="x5">
+        <div className="cloud"></div>
+  </div> */}
+
+</div>
+
+<div className="moon"><img src={moon} alt="moon"/></div>
+<div className="hand"><img src={zombieHand} alt="zombie hand"/></div>
+<div className="grass"><img src={grass} alt="dead grass"/></div>
+<div className="grass2"><img src={moregrass} alt="more dead grass"/></div>
+
+
+
+<Hero/>
+
+
+
+</main>
     
     </>
   )

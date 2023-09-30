@@ -7,6 +7,9 @@ import Button from '../button/Button';
 import axios from '../../api/axios';
 import { Link, useNavigate } from "react-router-dom";
 
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
+
 const LOGIN_URL = 'http://localhost:3500/login';
 //todo set up stricter authentication
 //const LOGIN_URL = 'http://localhost:3500/api/auth/login';
@@ -82,6 +85,18 @@ const Login = () => {
 
   return (
     <>
+
+{/* ******************** */}
+{/* HEADER */}
+{/* ******************** */}
+
+<Header />
+
+{/* ******************** */}
+{/* MAIN */}
+{/* ******************** */}
+
+    <main>
     <section id="login" className="glass-effect">
     {/* error message at top */}
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
@@ -125,19 +140,16 @@ const Login = () => {
             <Link to="/register">Sign Up</Link>
     </span>
     </p>
-
-
-
-
-
-
-
 </section>
     
     
+</main>
+
+{/* ******************** */}
+{/* FOOTER */}
+{/* ******************** */}
     
-    
-    
+<Footer />
     
     
     
