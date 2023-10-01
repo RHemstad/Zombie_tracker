@@ -1,17 +1,9 @@
-
-
-
 /* needed by the map */
 /*
     id: "US",
     name: "United States",
     value: 100
 */
-    
-
-`
-`
-
 /* zombie types
 slow zombies
 fast zombies

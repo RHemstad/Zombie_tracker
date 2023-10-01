@@ -59,6 +59,7 @@ const Login = () => {
             );
             console.log(JSON.stringify(response?.data));
             //todo: finish setting up authentication / roles
+            //requires a with credential flag for axios
            //console.log(JSON.stringify(response));
             //const accessToken = response?.data?.accessToken;
             //const roles = response?.data?.roles;

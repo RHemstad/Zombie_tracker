@@ -10,12 +10,24 @@ updated_at
 
 const users = [
     {
-        "username": "Bexy",
-        "password": "Bexy1234!"
+        "username": "Wilma",
+        "password": "Wilma1234!"
     },
     {
         "username": "Fred",
         "password": "Fred1234!"
+    },
+    {
+        "username": "Barney",
+        "password": "Barney1234!"
+    },
+    {
+        "username": "Betty",
+        "password": "Betty1234!"
+    },
+    {
+        "username": "Bexy",
+        "password": "Bexy1234!"
     }
 ]
 

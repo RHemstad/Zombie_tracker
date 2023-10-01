@@ -17,6 +17,21 @@ let chart = root.container.children.push(
   })
   );
 
+  //rough fetch example
+  //fetch('http://localhost:3500/api/zombies')
+  //  .then(response => response.json())
+  //  .then(data => console.log(data));
+
+  /*
+  const response = await fetch('http://localhost:3500/api/zombies', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  */
+ 
+
 //Define Data
  /* Chart code */
  let zombieLocations = [

@@ -1,15 +1,3 @@
-/*
-
-Zombies Table:
-zombie_id (Primary key)
-name: "Zombie A"
-type: "slow"
-location spotted: "City A" //Map with animated bubbles
-created_at
-updated_at
-user_id (Foreign key)
-image_url (or a reference to the image location)?
-*/
 
 const {DataTypes} = require('sequelize');
 const {connectToDb} = require('../config/conn');
@@ -27,16 +15,19 @@ const Zombie = connectToDb.define('zombie', {
         allowNull: false
     },
     /* refers to country code */
+    /* needed for map */
     id: {
         type: DataTypes.STRING,
         allowNull: false
     },
     /* refers to country location of zombie */
+    /* needed for map */
     name: {
         type: DataTypes.STRING,
         allowNull: false
     },
     /* not sure at this point need to refine */
+    /* has to do with the map */
     value: {
         type: DataTypes.INTEGER,
         allowNull: false
