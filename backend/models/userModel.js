@@ -10,12 +10,11 @@ const User = connectToDb.define('user', {
         primaryKey: true,
         autoIncrement: true
     },
-
-    //role_id: {
-    //    type: DataTypes.INTEGER,
-    //    primaryKey: true,
-    //    allowNull: true  //todo change to false when roles set up
-   // },
+    roles: {
+        type: DataTypes.INTEGER,
+        default: 2001,
+        allowNull: false
+    },
 
     username: {
         type: DataTypes.STRING,

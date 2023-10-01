@@ -10,24 +10,16 @@ updated_at
 
 const users = [
     {
-        "username": "Wilma",
-        "password": "Wilma1234!"
+        "username": "FredA",
+        "roles": 2001,
+        "password": "$2b$10$zDnIruKyUERsaphJ5xGqC.rEI2hRVGy.qYwyOudWoPCd24q7kCIq2",
+        //"refreshToken": need to add once it is working
     },
     {
-        "username": "Fred",
-        "password": "Fred1234!"
-    },
-    {
-        "username": "Barney",
-        "password": "Barney1234!"
-    },
-    {
-        "username": "Betty",
-        "password": "Betty1234!"
-    },
-    {
-        "username": "Bexy",
-        "password": "Bexy1234!"
+        "username": "FredB",
+        "roles": 2001,
+        "password": "$2b$10$0NpWOfmoW./vUBK6knpFeuIZMjhSSGMnN4r6wDF.S2cXcsuWONWwK",
+        //"refreshToken": need to add once it is working
     }
 ]
 
