@@ -1,17 +1,6 @@
 //Get the data from the database
 
 const Users = require('../models/userModel');
-
-/*
-const Users = {
-users: require('../models/userModel'),
-setUsers: function (data) {this.users = data}
-}
-*/
-
-//const fsPromises = require('fs').promises;
-//const path = require('path');
-
 const bcrypt = require('bcrypt');
 
 /* *************************** */
@@ -67,7 +56,8 @@ const addRegisteredUser = async (req, res) => {
         const hashedPwd = await bcrypt.hash(password, 10);
         const newUser = await Users.create({
         username: username,
-        password: hashedPwd
+        password: hashedPwd,
+        roles: 2001,
         });
 
         console.log(newUser);

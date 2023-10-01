@@ -18,6 +18,7 @@ const handleLogin = async (req, res) => {
     // evaluate password
     const match = await bcrypt.compare(password, foundUser.password);
     if (match) {
+        const roles = foundUser.roles;
         //todo access roles?
         //create JWTs
         const accessToken = jwt.sign(
@@ -25,14 +26,12 @@ const handleLogin = async (req, res) => {
             //roles?
            // },
            {
+            //different namespace for jwt claims
             "UserInfo": {
-                "username": foundUser.username
-               // "roles": roles
+                "username": foundUser.username,
+                "roles": roles
             }
         },
-
-
-
             process.env.ACCESS_TOKEN_SECRET,
             { expiresIn: '10s' } //expires in 10 seconds
         );
@@ -50,6 +49,7 @@ const handleLogin = async (req, res) => {
             //console.log(roles);
 
         // Creates Secure Cookie with refresh token
+        // for testing purposes only secure: true has to be removed but needed for production
         res.cookie('jwt', refreshToken, { 
             httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 
         }); //1 day max age
