@@ -9,8 +9,8 @@ setUsers: function (data) {this.users = data}
 }
 */
 
-const fsPromises = require('fs').promises;
-const path = require('path');
+//const fsPromises = require('fs').promises;
+//const path = require('path');
 
 const bcrypt = require('bcrypt');
 
@@ -60,7 +60,7 @@ const addRegisteredUser = async (req, res) => {
     //todo fix bug here
     const duplicate = await Users.findOne({where: { username: username }});
     if (duplicate) {
-        return res.sendStatus(409).json({'message': `A user with that name already exists`}); //Conflict 
+        return res.sendStatus(409); //Conflict user already exists
     }
 
     try {
