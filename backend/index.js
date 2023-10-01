@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const corsOptions = require('./config/cors');
+const corsOptions = require('./config/corsOptions');
 const credentials = require('./middleware/credentials');
 const app = express();
 const port = 3500;
