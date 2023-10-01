@@ -26,9 +26,13 @@ Backend
 //npm i cors
 
 
-
+npm i dotenv jsonwebtoken cookie-parser
 
 npm run init (makes the connection/creates the tables)
+
+for env -
+node
+ require('crypto').randomBytes(64).toString('hex')
 
 
 
@@ -51,5 +55,58 @@ https://mybrowseraddon.com/access-control-allow-origin.html
 
 postman post
 https://apidog.com/articles/how-to-send-json-post-reques-with-postman/
+
+
+
+Testing notes for Backend JWT
+
+https://www.bezkoder.com/jwt-refresh-token-node-js/
+
+what this sequence does is you login a user,
+the user gets an authentication token
+that token is passed to the zombieTrackers...
+and enables access to the zombieTrackers list of people
+
+create the new user - post
+https://localhost:3500/register
+
+***
+
+login the user - post
+https://localhost:3500/auth
+
+returns a authorization tokens
+
+***
+-not working at the moment - says forbidden
+but bearer with token is still showing up on zombieTrackers, but getting Forbidden - did the token expire?
+see auth controller for time allocated?
+
+get the token at - under auth
+https://localhost:3500/zombieTrackers
+should return a list of those in that database
+and bearer with token should be in the output
+
+
+
+*** TODO FIX THIS - the access token is not being generated
+it might be that the httpcookie is not being sent?
+refresh token needs a longer duration
+
+cookie is created verification post - (works)
+https://localhost:3500/auth
+you'll see the cookie returned
+
+https://localhost:3500/refresh
+get (have nothing in the body)
+new access token should be generated
+
+********
+TODO  cookie logout is failing
+
+register a user
+authenticate the user
+logout the user -- throws a 401
+the client request has not been completed because it lacks valid authentication credentials for the requested resource.
 
 

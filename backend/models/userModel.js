@@ -1,17 +1,8 @@
-/*
-REGISTER TABLE
-Users Table:
-user_id (Primary key)
-username
-password (hashed and salted)
-roles
-created_at
-updated_at
-*/
-
-//const { hooks } = require('./user-role.hook');
 const {DataTypes} = require('sequelize');
 const {connectToDb} = require('../config/conn');
+
+//TODO add refresh token to user model
+//TODO add roles to user model
 
 const User = connectToDb.define('user', {
     user_id: {
@@ -31,11 +22,15 @@ const User = connectToDb.define('user', {
         allowNull: false,
         unique: true
     },
-
     password: {
         type: DataTypes.STRING,
         allowNull: false
-    }
+    },
+    refreshToken: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    
 }, {
     timestamps: true,
     createdAt: 'created_at',

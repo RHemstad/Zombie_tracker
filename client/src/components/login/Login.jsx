@@ -5,7 +5,8 @@ import useAuth from '../../hooks/useAuth';
 
 import Button from '../button/Button';
 import axios from '../../api/axios';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+
 
 const LOGIN_URL = 'http://localhost:3500/login';
 //todo set up stricter authentication
@@ -15,8 +16,10 @@ const LOGIN_URL = 'http://localhost:3500/login';
 //Login - aka sign in to existing account
 //Using the term ‘login’ means that at a glance the user can instantly tell the difference between ‘Login’ and ‘Sign up’.
 const Login = () => {
-    const navigate = useNavigate();
     const { setAuth } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/dashboard';
 
     //ref to set focus on input
     const userRef = useRef();
@@ -26,8 +29,7 @@ const Login = () => {
     const [username, setUser] = useState('');
     const [password, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
-    //for testing only
-    const [success, setSuccess] = useState(false);
+ 
 
     /* **************************** */
     /* **** USE EFFECT ************ */
@@ -57,13 +59,14 @@ const Login = () => {
             );
             console.log(JSON.stringify(response?.data));
             //todo: finish setting up authentication / roles
+            //requires a with credential flag for axios
            //console.log(JSON.stringify(response));
             //const accessToken = response?.data?.accessToken;
             //const roles = response?.data?.roles;
             //setAuth({ username, password, roles, accessToken });
             setUser('');
             setPwd('');
-            setSuccess(true);
+            navigate(from, {replace: true});
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -76,12 +79,11 @@ const Login = () => {
             }
             errRef.current.focus();
         }
-
-
     }
 
   return (
     <>
+
     <section id="login" className="glass-effect">
     {/* error message at top */}
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
@@ -125,20 +127,7 @@ const Login = () => {
             <Link to="/register">Sign Up</Link>
     </span>
     </p>
-
-
-
-
-
-
-
 </section>
-    
-    
-    
-    
-    
-    
     
     
     </>

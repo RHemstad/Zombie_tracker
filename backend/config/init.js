@@ -1,14 +1,18 @@
 const {connectToDB} = require("./conn");
-const User = require("../models/userModel");
-const Zombie = require("../models/zombieModel");
+const Users = require("../models/userModel");
+const Zombies = require("../models/zombieModel");
+const ZombieTrackers = require("../models/zombieTrackersModel");
 
 async function initializeDB(){
 
 try{
-    await Zombie.drop(); //needs to come first because it looks at user
-    await User.drop();
-    await User.sync();
-    await Zombie.sync(); //needs to come second because it looks at user
+    await Zombies.drop(); //needs to come first because it looks at user
+    await Users.drop();
+    await ZombieTrackers.drop();
+
+    await Users.sync();
+    await Zombies.sync(); //needs to come second because it looks at user
+    await ZombieTrackers.sync();
 
     console.log("The tables were successfully created");
     return true;
