@@ -1,5 +1,7 @@
+import "./toolbar.css";
 import React from 'react'
 import { Link, useNavigate } from "react-router-dom";
+import Button from '../button/Button';
 
 const Toolbar = ({zombie, setZombies}) => {
     const navigate = useNavigate();
@@ -7,13 +9,10 @@ const Toolbar = ({zombie, setZombies}) => {
     <>
 
 <nav id="dashboard-nav">
-    <button onClick={e => {setZombies(!zombie);}}>View All Zombies</button>
-    <button onClick={e => {setZombies(!zombie);}}>Add New Zombie</button>
-    <button onClick={e => {setZombies(!zombie);}}>Edit zombie</button>
-    <button onClick={e => {setZombies(!zombie);}}>Delete Zombie</button>
-    </nav>
-    <nav>
-    <li><Link to="/dashboard/map">Zombie Sightings</Link></li>
+    <button className="primary-button" onClick={e => {setZombies(!zombie);}}>View All Zombies</button>
+    <button className="primary-button" onClick={e => {setZombies(!zombie);}}>Add New Zombie</button>
+    <button className="primary-button" onClick={e => {setZombies(!zombie);}}>Edit Zombie</button>
+    <button className="primary-button" onClick={e => {setZombies(!zombie);}}>Delete Zombie</button>
     </nav>
 
 

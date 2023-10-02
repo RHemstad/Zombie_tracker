@@ -27,8 +27,6 @@ const Dashboard = () => {
     <section className="dashbord">
     <div className="header">
     <h2>Manage Your Zombie Data</h2>
-    YOU ARE LOGGED IN
-  Need a Sign out button
     </div>
 
 <div className="toolbar">

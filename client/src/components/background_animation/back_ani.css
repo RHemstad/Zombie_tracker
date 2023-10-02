@@ -255,18 +255,17 @@
   
 
   #zombie_move {
-    bottom: 9%;
+    bottom: 5%;
     position: absolute;
-    -webkit-animation: zombwalk 25s linear infinite;
-    -moz-animation: zombwalk 25s linear infinite;
-    animation: zombwalk 25s linear infinite;
-    background-color: red;
+    -webkit-animation: zombwalk 500s linear infinite;
+    -moz-animation: zombwalk 500s linear infinite;
+    animation: zombwalk 500s linear infinite;
     z-index: 102;
   }
 
   #zombie_move img {
-    width: 100px;
-    height: 100px;
+    width: inherit;
+    height: 600px;
   }
 
   
