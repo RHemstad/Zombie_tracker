@@ -10,6 +10,9 @@ import Layout from './components/layout/Layout';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Admin from './components/admin/Admin';
+import Unauthorized from './components/unauthorized/Unauthorized';
+import Users from './components/users/Users';
+import TestPage from './components/TestPage';
 
 //object lookup for auto complete
 //not great for security but this is just a demo
@@ -22,7 +25,7 @@ const App = () => {
   return (
     <>
 
-    <Header />
+<Header />
 <Routes>
 <Route path="/" element={<Layout />}>
         {/* public */}
@@ -32,13 +35,20 @@ const App = () => {
        <Route path="/register" element={<Register />} />
        <Route path="/login" element={<Login />} />
 
-    {/* these routes are protected */}
-     {/* for demo - everyone is assigned 2001 role - aka user */}
-    <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
-       {/* these routes need to be protected */}
-         {/* home is dashboard */}
-       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="admin" element={<Admin />} />
+       <Route path="/unauthorized" element={<Unauthorized />} />
+       <Route path="/testpage" element={<TestPage />} />
+
+
+
+
+    {/* these routes need to be protected */}
+    <Route element={<RequireAuth />}>
+    {/* for demo - everyone is assigned 2001 role - aka user */}
+    {/* <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>*/}
+    {/* dashboard is our home for a signed in user */}
+    <Route path="/dashboard" element={<Dashboard />} />
+    {/* TODO: we don't have full roles yet */}
+    {/* <Route path="admin" element={<Admin />} />*/}
     </Route>
 
        {/* 404 */}

@@ -2,15 +2,11 @@ import './login.css';
 import '../../css/forms.css';
 import {useRef, useState, useEffect} from 'react';
 import useAuth from '../../hooks/useAuth';
-
-import Button from '../button/Button';
-import axios from '../../api/axios';
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import axios from '../../api/axios';
+import Button from '../button/Button';
 
-
-const LOGIN_URL = 'http://localhost:3500/login';
-//todo set up stricter authentication
-//const LOGIN_URL = 'http://localhost:3500/api/auth/login';
+const LOGIN_URL = 'http://localhost:3500/api/auth';
 
 
 //Login - aka sign in to existing account
@@ -60,10 +56,10 @@ const Login = () => {
             console.log(JSON.stringify(response?.data));
             //todo: finish setting up authentication / roles
             //requires a with credential flag for axios
-           //console.log(JSON.stringify(response));
-            //const accessToken = response?.data?.accessToken;
-            //const roles = response?.data?.roles;
-            //setAuth({ username, password, roles, accessToken });
+           console.log(JSON.stringify(response));
+            const accessToken = response?.data?.accessToken;
+            const roles = response?.data?.roles;
+            setAuth({ username, password, roles, accessToken });
             setUser('');
             setPwd('');
             navigate(from, {replace: true});

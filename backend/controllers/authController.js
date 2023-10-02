@@ -19,12 +19,8 @@ const handleLogin = async (req, res) => {
     const match = await bcrypt.compare(password, foundUser.password);
     if (match) {
         const roles = foundUser.roles;
-        //todo access roles?
         //create JWTs
         const accessToken = jwt.sign(
-           // { "username": foundUser.username 
-            //roles?
-           // },
            {
             //different namespace for jwt claims
             "UserInfo": {
@@ -33,7 +29,7 @@ const handleLogin = async (req, res) => {
             }
         },
             process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: '10s' } //expires in 10 seconds
+            { expiresIn: '1d' } //set later to expires in 10 seconds
         );
 
         const refreshToken = jwt.sign(
@@ -55,7 +51,8 @@ const handleLogin = async (req, res) => {
         }); //1 day max age
 
         //send the authorization roles and access token to the user
-        res.json({ accessToken });
+        //this is giving me grief on the client end.
+        res.json({ roles, accessToken });
         //res.json({'success': `User ${username} is logged in!` }); for testing
 
     } else {
