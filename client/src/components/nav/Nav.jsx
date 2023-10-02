@@ -14,10 +14,13 @@ return (
 
 <nav className="menu">
 <ul>
-<li><Link to="/dashboard">Dashboard</Link></li>
+{/*<li><Link to="/dashboard">Dashboard</Link></li>*/}
 <li><Link to="/map">Zombie Sightings</Link></li>
+<li><Link to="/login">Login</Link></li>
 
+{/* TODO: get this dynamically set up
 <li>Login/Signup (if not logged in), Logout(if Logged In)</li>
+*/}
 
 </ul>
 </nav>

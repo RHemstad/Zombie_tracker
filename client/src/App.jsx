@@ -30,6 +30,7 @@ const App = () => {
 <Route path="/" element={<Layout />}>
         {/* public */}
         {/* home is now the homepage */}
+        <Route path="/" element={<Home />} />
        <Route path="/home" element={<Home />} />
        <Route path="/map" element={<Map />} />
        <Route path="/register" element={<Register />} />
@@ -37,16 +38,14 @@ const App = () => {
 
        <Route path="/unauthorized" element={<Unauthorized />} />
        <Route path="/testpage" element={<TestPage />} />
+       <Route path="/dashboard" element={<Dashboard />} />
 
-
-
-
-    {/* these routes need to be protected */}
+    {/* Protected Routes */}
     <Route element={<RequireAuth />}>
     {/* for demo - everyone is assigned 2001 role - aka user */}
     {/* <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>*/}
     {/* dashboard is our home for a signed in user */}
-    <Route path="/dashboard" element={<Dashboard />} />
+
     {/* TODO: we don't have full roles yet */}
     {/* <Route path="admin" element={<Admin />} />*/}
     </Route>

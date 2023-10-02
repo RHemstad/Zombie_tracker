@@ -110,7 +110,7 @@ nav {
     color: var(--color-neutral);
   }
   
-  .menu li a:active {
+  .menu a:active {
     background-color: var( --color-secondary);
     /*background-color: #378ab4;*/
     color: var(--color-neutral);
@@ -118,6 +118,21 @@ nav {
   
   
   
+  nav.menu a {
+    color: var(--nav-color-link-normal);
+  }
+  
+  nav.menu a:active {
+    color: var(--nav-color-link-active);
+  }
+  
+  nav.menu a:hover {
+    color: var(--nav-color-link-hover);
+  }
+  
+  nav.menu a:visited {
+    color: var(--nav-color-link-normal)
+  }
   
   
   

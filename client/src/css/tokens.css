@@ -8,11 +8,10 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
 
-
   
     /**************** TYPOGRAPHY ****************/
 
-    --font-family-body: "Cantarell", "Segoe UI", "Helvetica Neue", Arial, sans-serif,
+    --font-family-body: "Open Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif,
       "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-headings: "Fjalla One", "Segoe UI", "Helvetica Neue", Arial,
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -76,9 +75,15 @@
 
 /**************** LINKS ****************/
  /* Content links not nav bar links */
- --color-link-normal: var(--color-primary);
- --color-link-hover: var(--color-tertiary);
- --color-link-visited: var(--color-primary);
+ --nav-color-link-normal: var(--color-primary);
+ --nav-color-link-hover: var(--color-tertiary);
+ --nav-color-link-visited: var(--color-primary);
+ --nav-color-link-active: var(--color-tertiary);
+
+
+ --color-link-normal: var(--color-tertiary);
+ --color-link-hover: var(--color-secondary);
+ --color-link-visited: var(--color-tertiary);
  --color-link-active: var(--color-tertiary);
 
  /**************** SPACING ****************/
@@ -94,8 +99,9 @@
 
 
 /**************** TEXT ****************/
---color-text: var(--color-white);
+--color-text: #0b141b;
 --color-text-alt: var(--color-black);
+--color-text-inverse: var(--color-white);
 
 
 /**************** BOX SHADOW ****************/
