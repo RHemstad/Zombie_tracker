@@ -6,7 +6,8 @@ import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '../button/Button';
 import axios from '../../api/axios';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import BackAni from '../background_animation/BackAni';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -16,6 +17,9 @@ const REGISTER_URL = 'http://localhost:3500/register'; //endpoint for registrati
 //Register - aka sign up, create account
 const Register = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/dashboard';
+
     const userRef = useRef();
     const errRef = useRef();
 
@@ -112,6 +116,7 @@ const Register = () => {
 
   return (
     <>
+     <BackAni />
     <section id="register" className="glass-effect">
 
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
@@ -145,7 +150,6 @@ const Register = () => {
         <p id="uidnote" className={userFocus && username && !validName ? "instructions" : "offscreen"}>
             <FontAwesomeIcon icon={faInfoCircle} />4 to 24 characters.
             Must begin with a letter.
-            Letters, numbers, underscores, hyphens allowed.
         </p>
 
         {/* ******************* */}
@@ -200,15 +204,19 @@ const Register = () => {
             Must match the first password input field.
         </p>
 
-        <button className="primary-button" disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
+        <button className="primary-button">Sign Up</button>
+
+            {/* 
+            //this is how to do it disabled until correct but not sure I like it
+            <button className="primary-button" disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button> */}
+
+
+
     </form>
     {/* END FORM */}
 
-    <p>Already registered?<br />
-    <span className="line">
-
-            <Link to="/login">Login</Link>
-    </span>
+    <p className="note">Already registered?<br />
+    <Link to="/login">Login</Link>
     </p>
     </section>
     </>

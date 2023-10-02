@@ -1,12 +1,15 @@
-import './login.css';
 import '../../css/forms.css';
+import './login.css';
 import {useRef, useState, useEffect} from 'react';
 import useAuth from '../../hooks/useAuth';
-import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from '../../api/axios';
 import Button from '../button/Button';
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import BackAni from '../background_animation/BackAni';
+import ZombieMove from '../background_animation/ZombieMove';
 
-const LOGIN_URL = 'http://localhost:3500/api/auth';
+
+const LOGIN_URL = 'http://localhost:3500/auth';
 
 
 //Login - aka sign in to existing account
@@ -80,6 +83,12 @@ const Login = () => {
   return (
     <>
 
+
+
+    <BackAni />
+
+    <ZombieMove />
+
     <section id="login" className="glass-effect">
     {/* error message at top */}
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
@@ -107,7 +116,7 @@ const Login = () => {
 <label htmlFor="password">Password</label>
     <input
         type="password"
-        id="pasword"
+        id="password"
         onChange={(e) => setPwd(e.target.value)}
         value={password}
         required
@@ -118,10 +127,8 @@ const Login = () => {
 
     {/* END FORM */}
 
-    <p>Need an Account?<br />
-    <span className="line">
-            <Link to="/register">Sign Up</Link>
-    </span>
+    <p className="note">Need an Account?<br />
+<Link to="/register">Sign Up</Link>
     </p>
 </section>
     

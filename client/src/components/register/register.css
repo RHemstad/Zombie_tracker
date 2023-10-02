@@ -1,6 +1,7 @@
 #register {
-    max-width: 420px;
-    min-width: 420px;
+    z-index: 100000000;
+    max-width: 600px;
+    min-width: 200px;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -10,8 +11,12 @@
     padding: var(--spacing-md);
     /*background-color: rgba(0,0,0,0.4);*/
     color: var(--color-text);
-    border: 2px solid orange;
+    border-radius: var(--size-border-radius-large);
 }
+
+
+
+
 
 
 

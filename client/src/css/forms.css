@@ -7,11 +7,19 @@ form {
     flex-grow: 1;
     padding-bottom: 1rem;
     width: inherit;
-    max-height: 400px;
+    max-height: fit-content;
+}
+
+p.note {
+    width: 100%;
+    text-align: center;
+    font-weight: var(--font-weight-bold)
 }
 
 label {
     color: var(--color-text-alt);
+    font-size: var(--font-size-large);
+    margin-top: var(--spacing-md);
 }
 
 input[type="text"],
@@ -21,7 +29,20 @@ textarea {
   border-radius: var(--size-border-radius-medium);
 }
 
+p#pwdnote, p#uidnote, p#confirmnote  {
+    margin: 0;
+    padding: var(--spacing-xx-sm);
+    border-radius: var(--size-border-radius-medium);
+    width: inherit;
+    height: fit-content
+   
+}
 
+p#pwdnote svg, p#uidnote svg, p#confirmnote svg {
+    margin-right: var(--spacing-xx-sm);
+    font-size: var(--font-size-medium);
+    
+}
 
 
 button {
@@ -33,13 +54,12 @@ button {
 }
 
 .instructions {
-    font-size: var(--font-size-small);
-    border-radius: var(--size-border-radius-medium);
     background: var(--color-alert);
-    color: var(--color-text);
+    color: var(--color-text-inverse);
     padding: var(--spacing-xx-sm);
-    position: relative;
+   /* position: relative;
     bottom: 0;
+    */
 }
 
 .instructions > svg {
@@ -47,9 +67,10 @@ button {
 }
 
 .offscreen {
-    position: absolute;
-    left: -9999px;
+   /* position: absolute;
+    left: -9999px;*/
 }
+
 
 .hide {
     display: none;
@@ -67,7 +88,7 @@ button {
 
 .errmsg {
     background-color: var(--color-alert);
-    color: var(--color-text);
+    color: var(--color-text-inverse);
     font-weight: var(--font-weight-bold);
     padding: var(--spacing-x-sm);
     margin-bottom: var(--spacing-x-sm);

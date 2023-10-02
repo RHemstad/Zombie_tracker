@@ -19,7 +19,7 @@ section.dashboard {
 
 .header {
     width: inherit;
-    border: 1px solid pink;
+    /*border: 1px solid pink;*/
     text-align: center;
     flex: 0 0 auto;
 }
