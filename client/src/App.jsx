@@ -3,6 +3,7 @@ import {Route, Routes} from 'react-router-dom'
 import Home from './components/home/Home';
 import Dashboard from './components/dashboard/Dashboard';
 import Map from './components/map/Map';
+import Map2 from './components/map/Map2';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
 import Missing from './components/missing/Missing';
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
        <Route path="/home" element={<Home />} />
        <Route path="/map" element={<Map />} />
+       <Route path="/map2" element={<Map2 />} />
        <Route path="/register" element={<Register />} />
        <Route path="/login" element={<Login />} />
 
