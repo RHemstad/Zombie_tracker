@@ -171,7 +171,7 @@
   
   @keyframes smooth-appear {
     to{
-      bottom: 10rem;
+      bottom: 0; /* fix this  value */
       opacity: 1;
     }
   }
